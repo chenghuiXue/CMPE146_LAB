@@ -1,0 +1,35 @@
+// These arguments were used when this file was generated. They will be automatically applied on subsequent loads 
+// via the GUI or CLI invocations. Run CLI with '--help' for additional information on how to override these arguments.
+// @cliArgs --board "/ti/boards/MSP_EXP432P401R" --product "simplelink_msp432p4_sdk@3.30.00.13"
+// @versions {"data":"2019083011","timestamp":"2019083011","tool":"1.2.952","templates":"2019083011"}
+
+var RTOS = scripting.addModule("/ti/drivers/RTOS");
+var Power = scripting.addModule("/ti/drivers/Power");
+var Board = scripting.addModule("/ti/drivers/Board");
+var DriverLib = scripting.addModule("/ti/devices/DriverLib");
+var UART = scripting.addModule("/ti/drivers/UART");
+var UART1 = UART.addInstance();
+// Name
+RTOS.timer0.resource.$name = "MyTIMER_A1";
+// Name
+Power.performanceLevel3.$name = "ti_drivers_power_PowerMSP432PerfLevels0";
+// Name
+Power.performanceLevel2.$name = "ti_drivers_power_PowerMSP432PerfLevels1";
+// Name
+Power.performanceLevel1.$name = "ti_drivers_power_PowerMSP432PerfLevels2";
+// Name
+Power.performanceLevel0.$name = "ti_drivers_power_PowerMSP432PerfLevels3";
+// Name - The C/C++ identifier used in applications as the index parameter passed to UART runtime APIs
+UART1.$name = "CONFIG_UART_0";
+// Use Hardware - Select the hardware to use, or 'None' to use available header pins
+UART1.$hardware = system.deviceData.board.components.XDS110UART;
+// Name
+UART1.uart.$name = "MyUART1";
+// Suggest solution
+RTOS.timer0.resource.$suggestSolution = "Timer_A0";
+// Suggest solution
+UART1.uart.$suggestSolution = "EUSCI_A0";
+// Suggest solution
+UART1.uart.txPin.$suggestSolution = "7";
+// Suggest solution
+UART1.uart.rxPin.$suggestSolution = "6";
