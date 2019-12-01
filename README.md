@@ -1,0 +1,1 @@
+TI’s real-time operating system, TI-RTOS. I will create tasks to do some work. Use semaphore to do task synchronization. Use the TI driver to do communication with UART. 
